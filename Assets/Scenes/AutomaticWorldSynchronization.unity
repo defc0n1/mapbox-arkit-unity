@@ -187,6 +187,47 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114020511733235004, guid: 35e76f6e52f5c4252a0b703cc2019a37,
+        type: 2}
+      propertyPath: _useAutomaticSynchronizationBias
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020511733235004, guid: 35e76f6e52f5c4252a0b703cc2019a37,
+        type: 2}
+      propertyPath: _synchronizationBias
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069882848172988, guid: 35e76f6e52f5c4252a0b703cc2019a37, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114194964888021804, guid: 35e76f6e52f5c4252a0b703cc2019a37,
+        type: 2}
+      propertyPath: _latitudeLongitude
+      value: 40.039828, -105.066052
+      objectReference: {fileID: 0}
+    - target: {fileID: 114979273059922282, guid: 35e76f6e52f5c4252a0b703cc2019a37,
+        type: 2}
+      propertyPath: _lerpSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 120703237768853778, guid: 35e76f6e52f5c4252a0b703cc2019a37,
+        type: 2}
+      propertyPath: m_UseWorldSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4494018607839378, guid: 35e76f6e52f5c4252a0b703cc2019a37, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.306
+      objectReference: {fileID: 0}
+    - target: {fileID: 4494018607839378, guid: 35e76f6e52f5c4252a0b703cc2019a37, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.306
+      objectReference: {fileID: 0}
+    - target: {fileID: 4494018607839378, guid: 35e76f6e52f5c4252a0b703cc2019a37, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.306
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35e76f6e52f5c4252a0b703cc2019a37, type: 2}
   m_IsPrefabParent: 0

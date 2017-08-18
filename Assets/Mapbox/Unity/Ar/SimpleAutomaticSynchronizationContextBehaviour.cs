@@ -31,6 +31,8 @@
 
 		SimpleAutomaticSynchronizationContext _synchronizationContext;
 
+		int _anchorCount;
+
 		float _lastHeading;
 		float _lastHeight;
 
@@ -119,10 +121,20 @@
 
 		void SynchronizationContext_OnAlignmentAvailable(Ar.Alignment alignment)
 		{
+			//if (_anchorCount >= 3)
+			//{
+			//	_synchronizationContext.UseAutomaticSynchronizationBias = false;
+			//	_synchronizationContext.SynchronizationBias = 0;
+			//}
+			_anchorCount++;
+
 			var position = alignment.Position;
 			position.y = _lastHeight;
 			alignment.Position = position;
-			_alignmentStrategy.Align(alignment);
+			if (_anchorCount <= 3)
+			{
+				_alignmentStrategy.Align(alignment);
+			}
 		}
 	}
 }

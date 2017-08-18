@@ -106,7 +106,6 @@
 			_rotation = rotation;
 			_isCalibrated = true;
 
-			var accuracy = _gpsNodes[_count - 1].Accuracy;
 			var delta = _currentArVector - relativeGpsVector;
 			var deltaDistance = delta.magnitude;
 
@@ -116,8 +115,10 @@
 				// FIXME: This works fine, but a better approach would be to reset only after we favor GPS.
 				// In other words, don't reset every time we add a node.
 				// Generally speaking, this will slowly shift the bias up before resetting bias to 0.
+				var accuracy = _gpsNodes[_count - 1].Accuracy;
 				bias = Mathf.Clamp01((.5f * (deltaDistance + ArTrustRange - accuracy)) / deltaDistance);
 			}
+			Debug.Log("SimpleAutomaticSynchronizationContext: " + bias);
 
 			// Our new "origin" will be the difference offset between our last nodes (mapped into the same coordinate space).
 			var originOffset = _arNodes[_count - 2] - headingQuaternion * _gpsNodes[_count - 2].Position;

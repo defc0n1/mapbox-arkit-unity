@@ -124,7 +124,8 @@
 			//_worldRelativeScale = (float)(_unityTileSize / referenceTileRect.Size.x);
 			_root.localPosition = -Conversions.GeoToWorldPosition(_mapCenterLatitudeLongitude.x, _mapCenterLatitudeLongitude.y, _mapCenterMercator, _worldRelativeScale).ToVector3xz();
 			//Root.localScale = Vector3.one * _worldRelativeScale;
-
+			var relativeScale = Mathf.Cos(Mathf.Deg2Rad * (float)_mapCenterLatitudeLongitude.x);
+			_root.localScale = Vector3.one * relativeScale;
 			_mapVisualizer.Initialize(this, _fileSouce);
 			_tileProvider.Initialize(this);
 
